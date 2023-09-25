@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Esse arquivo é usado pelo processo de publicação/pacote do seu projeto Web. É possível personalizar o comportamento deste processo
+ao editar este arquivo MSBuild. Para saber mais sobre isso, visite https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAA78MndGIlVU69ntZBqLuSdQAAAAACAAAAAAAQZgAAAAEAACAAAABxw981Qx1zjoDjUT2ChciW/JLDRe9VazclsNQ+RMrLSwAAAAAOgAAAAAIAACAAAADu2pW3Z2n6zQxB3g4lmegMLI/l3XJFuLyU0b6Dz/cY4IAAAACAYHVqPIcL3bXp2YCwxH65JSjjONrdvYH9bK0Mvm3A74rrfmx5Dmfs3E6iyaQdE2zrwHAD4a89CREu93vtM0pI1HopTFff8s+G6f08EbgF4Mid9A1aoxQVEV3weZYtJ4WgvSaOD5Qfm/bLdMX/tIEZ/lWuQAa9HwVmx27Kda+BX0AAAADMtQbUJSlJw0PAYpXYCiX1mwrlNXYbJYUli+TsTqy6SoBBTZqKVhXNEFosKVnhe1/a2b97km8DS70U+tMRp9UZ</EncryptedPassword>
+    <History>True|2023-09-25T20:11:57.2364991Z;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="TempMotoWebContext">
+      <Value>Data Source=tcp:tempmotowebdbserver.database.windows.net,1433%3bInitial Catalog=TempMotoWeb_db%3bUser Id=Enzo%40tempmotowebdbserver%3bPassword=Lembrei1!</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="TempMotoWeb.Data.TempMotoWebContext">
+      <Value>Data Source=tcp:tempmotowebdbserver.database.windows.net,1433%3bInitial Catalog=TempMotoWeb_db%3bUser Id=Enzo%40tempmotowebdbserver%3bPassword=Lembrei1!</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
