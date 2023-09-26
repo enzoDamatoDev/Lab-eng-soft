@@ -10,6 +10,6 @@
         public float Umidade { get; set; }
         public int Num_Satelites { get; set; }
         public float Velocidade { get; set; }
-        public DateTime Data_Medicao { get; set; }
+        public DateTime? Data_Medicao { get; set; } = DateTime.Now.AddHours(-3);
     }
 }

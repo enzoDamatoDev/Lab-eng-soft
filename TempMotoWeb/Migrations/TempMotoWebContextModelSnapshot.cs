@@ -33,7 +33,7 @@ namespace TempMotoWeb.Migrations
                     b.Property<float>("Altitude")
                         .HasColumnType("real");
 
-                    b.Property<DateTime>("Data_Medicao")
+                    b.Property<DateTime?>("Data_Medicao")
                         .HasColumnType("datetime2");
 
                     b.Property<double>("Latitude")

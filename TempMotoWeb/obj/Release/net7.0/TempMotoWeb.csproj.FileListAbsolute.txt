@@ -251,3 +251,8 @@ D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Release\net7.0\TempMotoWeb.pdb
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Release\net7.0\TempMotoWeb.genruntimeconfig.cache
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Release\net7.0\ref\TempMotoWeb.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Release\net7.0\Microsoft.OpenApi.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Release\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Release\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Release\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Release\net7.0\TempMotoWeb.MvcApplicationPartsAssemblyInfo.cs

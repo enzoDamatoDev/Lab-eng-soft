@@ -41,6 +41,7 @@ D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Microsoft.NET.StringTools.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Microsoft.OpenApi.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -61,6 +62,9 @@ D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\NuGet.ProjectModel.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\NuGet.Protocol.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\NuGet.Versioning.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\System.CodeDom.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\System.Composition.AttributedModel.dll
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\bin\Debug\net7.0\System.Composition.Convention.dll
@@ -232,6 +236,7 @@ D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Debug\net7.0\TempMotoWeb.AssemblyInfoInputs.cache
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Debug\net7.0\TempMotoWeb.AssemblyInfo.cs
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Debug\net7.0\TempMotoWeb.csproj.CoreCompileInputs.cache
+D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Debug\net7.0\TempMotoWeb.MvcApplicationPartsAssemblyInfo.cs
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Debug\net7.0\TempMotoWeb.MvcApplicationPartsAssemblyInfo.cache
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Debug\net7.0\TempMotoWeb.RazorAssemblyInfo.cache
 D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Debug\net7.0\TempMotoWeb.RazorAssemblyInfo.cs
