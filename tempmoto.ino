@@ -243,6 +243,10 @@ void print_speed()
 void posta(){
   if(millis() - ultima >= 60000){
     ultima = millis();
+    
+    limpaDisplay();
+    display.println("postando medicoes");
+    display.display();
   WiFiClientSecure *client = new WiFiClientSecure;
     client->setInsecure(); //don't use SSL certificate
     HTTPClient https;
@@ -264,13 +268,21 @@ void posta(){
     if (httpResponseCode>0) {
       Serial.print("HTTP Response code: ");
       Serial.println(httpResponseCode);
+      display.print("Cod Resp:");
+      display.print(httpResponseCode);
+      display.display();
     }
     else {
       Serial.print("Error code: ");
       Serial.println(httpResponseCode);
+      
+      display.print("Erro postagem:");
+      display.print(httpResponseCode);
+      display.display();
     }
     // Free resources
     https.end();
+    delay(2000);
     limpaDisplay();
   }
 }
