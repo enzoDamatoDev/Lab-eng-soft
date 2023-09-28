@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v10BInLH/EAMuVYgPKE1XCuKfhzG5XItc9bm11bSY/Q=",
+  "Hash": "AJD/BiDinjIEnW1u/usF9pMYd/YWE2TRugR5YhWS8w4=",
   "Source": "TempMotoWeb",
   "BasePath": "_content/TempMotoWeb",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\obj\\Release\\net7.0\\scopedcss\\projectbundle\\TempMotoWeb.bundle.scp.css"
     },
     {
+      "Identity": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\css\\google.css",
+      "SourceId": "TempMotoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\",
+      "BasePath": "_content/TempMotoWeb",
+      "RelativePath": "css/google.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\google.css"
+    },
+    {
       "Identity": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\css\\site.css",
       "SourceId": "TempMotoWeb",
       "SourceType": "Discovered",
@@ -83,6 +100,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\js\\google.js",
+      "SourceId": "TempMotoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\",
+      "BasePath": "_content/TempMotoWeb",
+      "RelativePath": "js/google.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\google.js"
     },
     {
       "Identity": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\js\\site.js",
