@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CH4kXPkROM245vQeNTpSrhMbei0gbE10y5/t+68kcR8=",
+  "Hash": "L7khg7BqonLQ0LBuAORzeiagKR7LbfcCfVSgE6nkehQ=",
   "Source": "TempMotoWeb",
   "BasePath": "_content/TempMotoWeb",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\google.js"
+    },
+    {
+      "Identity": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\js\\MapaMult.js",
+      "SourceId": "TempMotoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\",
+      "BasePath": "_content/TempMotoWeb",
+      "RelativePath": "js/MapaMult.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\MapaMult.js"
     },
     {
       "Identity": "D:\\enzod\\downloadJogos\\mack\\6 semestre\\lab eng soft\\Lab-eng-soft\\TempMotoWeb\\wwwroot\\js\\site.js",

@@ -159,5 +159,10 @@ namespace TempMotoWeb.Controllers
         {
           return (_context.Medicao?.Any(e => e.Id == id)).GetValueOrDefault();
         }
+
+        public async Task<IActionResult> Mapa()
+        {
+            return View(await _context.Medicao.ToListAsync());
+        }
     }
 }

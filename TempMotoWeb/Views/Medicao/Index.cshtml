@@ -1,10 +1,14 @@
 ﻿@model IEnumerable<TempMotoWeb.Models.Medicao>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista";
 }
 
-<h1>Index</h1>
+@section Scripts{
+    <meta http-equiv="refresh" content="300" />
+}
+
+<h1>Lista de Medições</h1>
 
 <!--<p>
     <a asp-action="Create">Create New</a>

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using TempMotoWeb.Data;
 using TempMotoWeb.Models;
 
@@ -41,6 +42,18 @@ namespace TempMotoWeb.Controllers
             _context.SaveChanges();
 
             return Results.Created($"/medicao/{medicao.Id}", medicao);
+        }
+        [HttpGet("mapa")]
+        public Task<List<Medicao>> Mapa([FromQuery]int[] itens)
+        {
+            //List<Medicao> list = new List<Medicao>();
+            var list = _context.Medicao
+                .Where(x => itens.Contains(x.Id))
+                .ToListAsync();
+
+
+
+            return list;
         }
 
         // PUT api/<ApiController>/5
