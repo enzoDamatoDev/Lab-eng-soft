@@ -13,9 +13,17 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
+    Environment.SetEnvironmentVariable("baseUrl", "https://tempmotoweb.azurewebsites.net/");
+    Environment.SetEnvironmentVariable("mapsKey", "AIzaSyDgBBPqSV-8pmM2ePnkPJa7U0mSdrP2dRs");
+
     app.UseExceptionHandler("/Home/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+}
+else
+{
+    Environment.SetEnvironmentVariable("baseUrl", "https://localhost:44373/");
+    Environment.SetEnvironmentVariable("mapsKey", "AIzaSyAiYs04uLWM_Eek7WuOorLA5A3Pic8pAuM");
 }
 
 app.UseHttpsRedirection();

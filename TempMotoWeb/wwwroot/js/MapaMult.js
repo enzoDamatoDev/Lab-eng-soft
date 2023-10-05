@@ -8,7 +8,7 @@ async function montarMapa(){
         return;
     }
 
-    let url = "https://tempmotoweb.azurewebsites.net//api/medicoes/mapa?itens=";
+    let url = baseUrl +"api/medicoes/mapa?itens=";//"https://tempmotoweb.azurewebsites.net/api/medicoes/mapa?itens=";
     url += selecionados.join("&itens=");
 
     var settings = {
@@ -22,11 +22,9 @@ async function montarMapa(){
     };
 
     $.ajax(settings);
-
-    const position = { lat: resp[0].latitude, lng: resp[0].longitude };
+    //console.log(resp);
     // Request needed libraries.
     //@ts-ignore
-    console.log(position)
 
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
@@ -34,14 +32,39 @@ async function montarMapa(){
     // The map, centered at Uluru
     map = new Map(document.getElementById("map"), {
         zoom: 15,
-        center: position,
+        center: { lat: 0, lng: 0 },
         mapId: "DEMO_MAP_ID",
     });
 
     // The marker, positioned at Uluru
-    const marker = new AdvancedMarkerView({
-        map: map,
-        position: position,
-        title: "Uluru",
+    resp.forEach(function (item, i) {
+        var html = `<div class="conteiner">
+                        <span>Latitude: ${item.latitude}</span><br>
+                        <span>Longitude: ${item.longitude}</span><br>
+                        <span>Temperatura: ${item.temperatura}</span><br>
+                        <span>Umidade: ${item.umidade}</span><br>
+                        <span>Velocidade: ${item.velocidade}</span><br>
+                        <span>Data: ${item.data_Medicao}</span><br>
+
+                    </div>`;
+        var marker = new AdvancedMarkerView({
+            map: map,
+            position: {
+                lat: item.latitude,
+                lng: item.longitude
+            }
+            ,
+            title: item.data_medicao,
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: html,
+            ariaLabel: "marker",
+        });
+        marker.addListener("click", () => {
+            infowindow.open({
+                anchor: marker,
+                map,
+            });
+        });
     });
 }
