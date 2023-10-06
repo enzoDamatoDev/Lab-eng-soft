@@ -28,6 +28,7 @@ async function montarMapa(){
 
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
+    var bounds = new google.maps.LatLngBounds();
 
     // The map, centered at Uluru
     map = new Map(document.getElementById("map"), {
@@ -47,6 +48,7 @@ async function montarMapa(){
                         <span>Data: ${item.data_Medicao}</span><br>
 
                     </div>`;
+
         var marker = new AdvancedMarkerView({
             map: map,
             position: {
@@ -66,5 +68,9 @@ async function montarMapa(){
                 map,
             });
         });
+        bounds.extend(marker.position);
+
     });
+    map.fitBounds(bounds);
+
 }
