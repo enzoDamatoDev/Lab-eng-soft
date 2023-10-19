@@ -17,56 +17,66 @@
 <div>
     <h4>Medicao</h4>
     <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Latitude)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Latitude)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Longitude)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Longitude)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Altitude)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Altitude)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Temperatura)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Temperatura)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Umidade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Umidade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Num_Satelites)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Num_Satelites)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Velocidade)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Velocidade)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Data_Medicao)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Data_Medicao)
-        </dd>
-    </dl>
+    <div class="row">
+        <dl class="col-md-6">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.endereco)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.endereco)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Latitude)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Latitude)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Longitude)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Longitude)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Altitude)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Altitude)
+            </dd>
+            </dl>
+            <dl class="col-md-6">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Temperatura)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Temperatura)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Umidade)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Umidade)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Num_Satelites)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Num_Satelites)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Velocidade)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Velocidade)
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Data_Medicao)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(model => model.Data_Medicao)
+            </dd>
+        </dl>
+    </div>
 </div>
 <div>
     <!--<a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |-->

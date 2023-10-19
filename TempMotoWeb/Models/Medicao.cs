@@ -1,4 +1,6 @@
-﻿namespace TempMotoWeb.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TempMotoWeb.Models
 {
     public class Medicao
     {
@@ -10,6 +12,9 @@
         public float Umidade { get; set; }
         public int Num_Satelites { get; set; }
         public float Velocidade { get; set; }
+        [Display(Name = "Data")]
+        [DisplayFormat(DataFormatString = "{0: HH:mm dd/MM/yyyy}")]
         public DateTime? Data_Medicao { get; set; } = DateTime.Now.AddHours(-3);
+        public string? endereco { get; set; }
     }
 }

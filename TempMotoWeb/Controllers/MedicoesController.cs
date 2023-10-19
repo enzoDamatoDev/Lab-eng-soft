@@ -1,5 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json.Linq;
+using NuGet.Protocol;
+using System.Globalization;
+using System.Net.Http.Headers;
 using TempMotoWeb.Data;
 using TempMotoWeb.Models;
 
@@ -35,23 +39,45 @@ namespace TempMotoWeb.Controllers
 
         // POST api/<ApiController>
         [HttpPost]
-        public IResult Post(Medicao medicao)
+        public async Task<IResult> Post(Medicao medicao)
         {
+            string url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + medicao.Latitude.ToString().Replace(',', '.') + "," + medicao.Longitude.ToString().Replace(',', '.') + "&result_type=street_address|country&key=" + Environment.GetEnvironmentVariable("mapsKey");
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri(url);
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+
+            HttpResponseMessage response = await client.GetAsync("");
+            Console.WriteLine(response);
+            if(response.IsSuccessStatusCode)
+            {
+                var resp = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+                medicao.endereco = resp["results"][0]["formatted_address"].ToString();
+            }
+            else
+            {
+                return Results.Problem("endereço não localizado");
+            }
+
 
             _context.Medicao.Add(medicao);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
 
             return Results.Created($"/medicao/{medicao.Id}", medicao);
         }
+
         [HttpGet("mapa")]
-        public Task<List<Medicao>> Mapa([FromQuery]int[] itens)
+        public async Task<List<Medicao>> Mapa([FromQuery]int[] itens)
         {
-            //List<Medicao> list = new List<Medicao>();
-            var list = _context.Medicao
+            var list = await _context.Medicao
                 .Where(x => itens.Contains(x.Id))
                 .ToListAsync();
 
-
+            foreach(var it in list)
+            {
+                it.Data_Medicao = DateTime.Parse(it.Data_Medicao.ToString(), new CultureInfo("pt-BR"));
+            }
 
             return list;
         }

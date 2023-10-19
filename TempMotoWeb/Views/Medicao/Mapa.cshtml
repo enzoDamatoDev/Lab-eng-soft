@@ -20,7 +20,7 @@
             <select id="selected" name="selected" multiple class="form-select form-select-sm" aria-label="multiple select example">
                 @foreach (var item in Model)
                 {
-                    <option value="@item.Id">@item.Data_Medicao</option>
+                    <option value="@item.Id">@(item.endereco?? item.Data_Medicao.ToString()) </option>
             
                 }
             </select>

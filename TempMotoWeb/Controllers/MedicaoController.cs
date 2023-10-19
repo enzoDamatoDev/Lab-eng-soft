@@ -164,5 +164,9 @@ namespace TempMotoWeb.Controllers
         {
             return View(await _context.Medicao.ToListAsync());
         }
+        public async Task<IActionResult> Grafico()
+        {
+            return View(await _context.Medicao.ToListAsync());
+        }
     }
 }
