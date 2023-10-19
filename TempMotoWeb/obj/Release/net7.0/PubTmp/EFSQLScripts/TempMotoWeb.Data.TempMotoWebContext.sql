@@ -76,3 +76,22 @@ GO
 COMMIT;
 GO
 
+BEGIN TRANSACTION;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20231015061907_AddEndereco')
+BEGIN
+    ALTER TABLE [Medicao] ADD [endereco] nvarchar(max) NULL;
+END;
+GO
+
+IF NOT EXISTS(SELECT * FROM [__EFMigrationsHistory] WHERE [MigrationId] = N'20231015061907_AddEndereco')
+BEGIN
+    INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+    VALUES (N'20231015061907_AddEndereco', N'7.0.11');
+END;
+GO
+
+COMMIT;
+GO
+

@@ -74,10 +74,10 @@ namespace TempMotoWeb.Controllers
                 .Where(x => itens.Contains(x.Id))
                 .ToListAsync();
 
-            foreach(var it in list)
+            /*foreach(var it in list)
             {
                 it.Data_Medicao = DateTime.Parse(it.Data_Medicao.ToString(), new CultureInfo("pt-BR"));
-            }
+            }*/
 
             return list;
         }
