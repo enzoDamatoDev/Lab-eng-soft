@@ -41,30 +41,36 @@ namespace TempMotoWeb.Controllers
         [HttpPost]
         public async Task<IResult> Post(Medicao medicao)
         {
-            string url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + medicao.Latitude.ToString().Replace(',', '.') + "," + medicao.Longitude.ToString().Replace(',', '.') + "&result_type=street_address|country&key=" + Environment.GetEnvironmentVariable("mapsKey");
-            HttpClient client = new HttpClient();
-            client.BaseAddress = new Uri(url);
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
-
-            HttpResponseMessage response = await client.GetAsync("");
-            Console.WriteLine(response);
-            if(response.IsSuccessStatusCode)
+            try
             {
-                var resp = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-                medicao.endereco = resp["results"][0]["formatted_address"].ToString();
-            }
-            else
+                string url = "https://maps.googleapis.com/maps/api/geocode/json?latlng=" + medicao.Latitude.ToString().Replace(',', '.') + "," + medicao.Longitude.ToString().Replace(',', '.') + "&result_type=street_address|country&key=" + Environment.GetEnvironmentVariable("apiKey");
+                HttpClient client = new HttpClient();
+                client.BaseAddress = new Uri(url);
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(
+                    new MediaTypeWithQualityHeaderValue("application/json"));
+
+                HttpResponseMessage response = await client.GetAsync("");
+                Console.WriteLine(response);
+                if (response.IsSuccessStatusCode)
+                {
+                    var resp = JObject.Parse(response.Content.ReadAsStringAsync().Result);
+                    medicao.endereco = (resp["results"][0]["formatted_address"].ToString());
+                }
+                else
+                {
+                    return Results.Problem("endereço não localizado");
+                }
+
+
+                _context.Medicao.Add(medicao);
+                await _context.SaveChangesAsync();
+
+                return Results.Created($"/medicao/{medicao.Id}", medicao);
+            }catch(Exception e)
             {
-                return Results.Problem("endereço não localizado");
+                return Results.Problem(e.Message+e.StackTrace);
             }
-
-
-            _context.Medicao.Add(medicao);
-            await _context.SaveChangesAsync();
-
-            return Results.Created($"/medicao/{medicao.Id}", medicao);
         }
 
         [HttpGet("mapa")]
