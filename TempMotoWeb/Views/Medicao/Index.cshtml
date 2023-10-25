@@ -36,9 +36,9 @@
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+            <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.endereco)
+                    @(item.endereco != null ? @Html.DisplayFor(modelItem => item.endereco) : @Html.Raw("lat: " + item.Latitude + " long: " + item.Longitude))
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Temperatura)
