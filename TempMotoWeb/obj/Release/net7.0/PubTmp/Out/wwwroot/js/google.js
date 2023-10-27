@@ -22,5 +22,5 @@ async function initMap(lat, long) {
         position: position,
         title: "Uluru",
     });
-}
 
+}
