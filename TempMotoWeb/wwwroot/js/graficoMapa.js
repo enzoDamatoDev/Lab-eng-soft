@@ -38,6 +38,8 @@ async function montarMapa() {
 
     // The marker, positioned at Uluru
     resp.forEach(function (item, i) {
+        var data = new Date(item.data_Medicao);
+        item.data_Medicao = data.getHours() + ":" + data.getMinutes() + " " + data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear();
         var html = `<div class="conteiner">
                         <span>Latitude: ${item.latitude}</span><br>
                         <span>Longitude: ${item.longitude}</span><br>

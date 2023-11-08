@@ -8,7 +8,7 @@ async function montarMapa(){
         return;
     }
 
-    let url = baseUrl +"api/medicoes/mapa?itens=";//"https://tempmotoweb.azurewebsites.net/api/medicoes/mapa?itens=";
+    let url = baseUrl +"api/medicoes/mapa?itens=";
     url += selecionados.join("&itens=");
 
     var settings = {
@@ -22,23 +22,21 @@ async function montarMapa(){
     };
 
     $.ajax(settings);
-    //console.log(resp);
-    // Request needed libraries.
-    //@ts-ignore
 
     const { Map } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerView } = await google.maps.importLibrary("marker");
     var bounds = new google.maps.LatLngBounds();
 
-    // The map, centered at Uluru
     map = new Map(document.getElementById("map"), {
         zoom: 15,
         center: { lat: 0, lng: 0 },
         mapId: "DEMO_MAP_ID",
     });
 
-    // The marker, positioned at Uluru
     resp.forEach(function (item, i) {
+        var data = new Date(item.data_Medicao);
+        item.data_Medicao = data.getHours() + ":" + data.getMinutes() + " " + data.getDate() + "/" + (data.getMonth() + 1) + "/" + data.getFullYear();
+
         var html = `<div class="conteiner">
                         <span>Latitude: ${item.latitude}</span><br>
                         <span>Longitude: ${item.longitude}</span><br>
