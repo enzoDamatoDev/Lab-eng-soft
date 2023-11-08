@@ -4,7 +4,6 @@
     ViewData["Title"] = "Mapa";
 }
 @section Header{
-    <link rel="stylesheet" type="text/css" href="~/css/google.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script>
@@ -27,22 +26,30 @@
             <input class="form-control" type="datetime-local" name="dataFim" id="dataFim" />
         </div>
         <div class="col-md-6">
+            <span>&nbsp;</span><br />
             <button class="btn btn-primary" onclick="montarMapa();">Mostar no mapa</button>
         </div>
     </div>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-9">
             <!--<select id="selected" name="selected" multiple class="form-select form-select-sm" aria-label="multiple select example">
                 @foreach (var item in Model)
                 {
                     <option value="@item.Id">@(item.endereco?? item.Data_Medicao.ToString()) </option>
                 }
             </select>-->
-            <div id="map"></div>
+            <div id="map" style="height: 500px;"></div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
+            <span>
+                No mapa está habilitada a criação de formas geométricas. para utilizar basta clicar em algum lugar do mapa e mover o mouse para criar uma aresta. 
+                Para fechar o polígono basta terminar uma aresta no começo da primeira aresta desenhada. O gráfico será montado com base nos pontos dentro da área delimitada.
+            </span>
+        </div>
+        
+        <!--<div class="col-md-6">
             <button class="btn btn-primary" onclick="montarGrafico();">Montar gráfico</button>
-        </div>
+        </div>-->
     </div>
 </div>
 <br/>

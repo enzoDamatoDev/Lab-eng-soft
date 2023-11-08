@@ -1,5 +1,5 @@
 ﻿let pontosGrafico = [];
-
+let poligono = null;
 async function montarMapa() {
     let dataInicio = $('#dataInicio').val();
     let dataFim = $('#dataFim').val();
@@ -87,11 +87,16 @@ async function montarMapa() {
     drawingManager.setMap(map);
 
     google.maps.event.addListener(drawingManager, 'polygoncomplete', function (poli) {
+        if (poligono != null) {
+            poligono.setMap(null);
+        }
+        poligono = poli;
         pontosGrafico = [];
         for (var i = 0; i < resp.length; i++) {
             if (google.maps.geometry.poly.containsLocation({ lat: resp[i].latitude, lng: resp[i].longitude }, poli)) {
                 pontosGrafico.push(resp[i]);
             }
         }
+        montarGrafico();
     });
 }

@@ -12,22 +12,22 @@ const myChart = new Chart(ctx, {
     options: {
         scales: {
             y: {
-                beginAtZero: false
+                beginAtZero: true
             }
         }
     }
 });
 
 async function montarGrafico() {
-    console.log(pontosGrafico);
+
     myChart.clear();
     myChart.data.labels = []
     myChart.data.datasets[0].data = [];
+    myChart.data.datasets[0].label = 'temperatura';
 
     pontosGrafico.forEach(function (item, i) {
 
         myChart.data.labels[i] = item.data_Medicao
-        myChart.data.datasets[0].label = 'temperatura';
         myChart.data.datasets[0].data[i] = item.temperatura;
 
     });

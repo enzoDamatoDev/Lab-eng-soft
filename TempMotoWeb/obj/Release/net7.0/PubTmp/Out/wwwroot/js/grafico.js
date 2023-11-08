@@ -19,7 +19,6 @@ const myChart = new Chart(ctx, {
 });
 
 async function montarGrafico() {
-    console.log(pontosGrafico);
     myChart.clear();
     myChart.data.labels = []
     myChart.data.datasets[0].data = [];
