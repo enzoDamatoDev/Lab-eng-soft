@@ -56,7 +56,14 @@ namespace TempMotoWeb.Controllers
                 if (response.IsSuccessStatusCode)
                 {
                     var resp = JObject.Parse(response.Content.ReadAsStringAsync().Result);
-                    medicao.endereco = (resp["results"][0]["formatted_address"].ToString());
+                    try
+                    {
+                        medicao.endereco = (resp["results"][0]["formatted_address"].ToString());
+                    }
+                    catch (Exception e)
+                    {
+                        medicao.endereco = null;
+                    }
                 }
                 else
                 {

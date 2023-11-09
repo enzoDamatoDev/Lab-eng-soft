@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Release\net7.0\win-x86\PubTmp\Out\" />
+  <dbfullsql path="D:\enzod\downloadJogos\mack\6 semestre\lab eng soft\Lab-eng-soft\TempMotoWeb\obj\Release\net7.0\win-x86\PubTmp\EFSQLScripts\TempMotoWeb.Data.TempMotoWebContext.sql" />
+</sitemanifest>
